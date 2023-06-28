@@ -16,7 +16,7 @@ public class Utilitario {
             do {
                 try {
                     num = Integer.parseInt(Input.nextLine());
-                    while (num < -1 || num > 99) {
+                    while (num < 0 || num > 99) {
                         Utilitario.limpiarPantalla();
                         System.out.print("\rDigite un numero positivo y en el rango que se le solicita: ");
                         num = Integer.parseInt(Input.nextLine());
@@ -97,6 +97,20 @@ public class Utilitario {
         }
 
         return enmascarado.toString();
+    }
+
+    public class mmConvertirDatosPersonales {
+        public static String mmConvertirCorreo(String mmCorreoElectronico) {
+            String mmCorreoValidado = mmCorreoElectronico.toLowerCase();
+            
+
+            return mmCorreoValidado;
+        }
+        public static String mmConvertirNombre(String mmNombre){
+            String mmNombreValidado = mmNombre.toUpperCase();
+            return mmNombreValidado;
+        }
+
     }
 
 }
