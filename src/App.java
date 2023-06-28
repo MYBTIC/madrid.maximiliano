@@ -36,17 +36,17 @@ public class App {
             Utilitario.limpiarPantalla();
             Scanner mmIngreso1 = new Scanner(System.in);
             Console consola = System.console();
-            System.out.println("--------------------------------------------------------");
+            System.out.println(Color.YELLOW+"--------------------------------------------------------");
             System.out.println("\t\t\tLOGIN");
             System.out.println("--------------------------------------------------------");
-            System.out.println("\n\n\t\t......................");
-            System.out.print("\n\t\t + Usuario: ");
+            System.out.println("\n\n\t\t......................"+Color.RESET);
+            System.out.print(Color.BLUE+"\n\t\t + Usuario: ");
             mmValidacionUsuario = mmIngreso1.nextLine();
             contrasena = consola.readPassword("\n\t\t + Clave: ");
             String contrasenaEnmascarada = Utilitario.mmEnmascararTexto(new String(contrasena));
             System.out.print("\n\t\t + Clave: " + contrasenaEnmascarada);
-            System.out.println("\n\n\t\t......................");
-            System.out.println("\t\t* Nro de intentos: " + mmContador);
+            System.out.println(Color.RESET+Color.YELLOW+"\n\n\t\t......................"+Color.RESET);
+            System.out.println(Color.PURPLE+"\t\t* Nro de intentos: " + mmContador + Color.RESET);
             Thread.sleep(1200);
 
             if (mmValidacionUsuario.equals(mmCorreoElectronico)) {
@@ -115,7 +115,7 @@ public class App {
                         
                         break;
                         case 3:
-                        Horario.mmMostrarHorario();
+                        Horario.mmLeerHorarioMedicos("202110105-CHUNCHO JIMENEZ ANGEL DAVID.csv");
                         break;
                         case 4:
                         

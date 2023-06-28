@@ -4,30 +4,23 @@ import java.io.FileNotFoundException;
 
 
 public interface GestiarArchivoHorario {
-    public static void mmLeerHorarioMedicos() {
+    public static void mmLeerHorarioMedicos(String mmRutaArchivo) {
         try {
-    File file = new File("202111083-HIDALGO CRUZ PABLO ESTEBAN.csv");
+    File file = new File("202110105-CHUNCHO JIMENEZ ANGEL DAVID.csv");
     Scanner scanner = new Scanner(file);
 
     // Lee el archivo línea por línea
     while (scanner.hasNextLine()) {
         String line = scanner.nextLine();
         
-        // Divide la línea en columnas utilizando una coma como separador
-        String[] columns = line.split(",");
-        
-        // Accede a los valores de cada columna
-        for (String column : columns) {
-            System.out.println(column);
-        }
+        String[] columns = line.split(";");
     }
     
-    scanner.close();
-} catch (FileNotFoundException e) {
-    e.printStackTrace();
-}
-
-
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    
 
     }
 
