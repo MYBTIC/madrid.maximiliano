@@ -112,5 +112,20 @@ public class Utilitario {
         }
 
     }
+    public static String replaceCharacter(String cadena, char caracterAntiguo, char caracterNuevo) {
+        StringBuilder builder = new StringBuilder();
+        
+        for (int i = 0; i < cadena.length(); i++) {
+            char caracter = cadena.charAt(i);
+            
+            if (caracter == caracterAntiguo) {
+                builder.append(caracterNuevo);
+            } else {
+                builder.append(caracter);
+            }
+        }
+        
+        return builder.toString();
+    }
 
 }

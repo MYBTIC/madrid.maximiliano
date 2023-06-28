@@ -91,10 +91,10 @@ public class App {
             System.out.println("\n\n\t\t......................");
             System.out.print("\n\t\t + Usuario: "+mmUsuarioLogeado.toUpperCase());
 
-            System.out.println("\n\n\t\t1. Viualizar Alumnos");
+            System.out.println("\n\n\t\t1. Viualizar Medicos");
             System.out.println("\n\t\t2. Viualizar Especialidades");
             System.out.println("\n\t\t3. Viualizar horarios");
-            System.out.println("\n\t\t4. Viualizar Horario de una asignatura");
+            System.out.println("\n\t\t4. Viualizar Horario de una especialidad");
             System.out.println("\n\t\t0. salir");
             System.out.print("\n\n\t\t  < + > Digite su opcion: ");
             mmOpcion = Utilitario.mmValidacion.mmValidacionNumero(mmOpcion);
@@ -109,13 +109,19 @@ public class App {
                         
                         return;
                         case 1:
-                        
+                        Utilitario.limpiarPantalla();
+                        System.out.println(Color.WHITE+"[+] Listado de <<"+mmTemaAsignado+">>");
+                        Horario.mmLeerHorarioMedicos("C:\\Users\\LabP344\\Documents\\madrid.maximiliano\\src\\Horarios");
+                        System.out.println("\n\n");
                         break;
                         case 2:
-                        
+                         Utilitario.limpiarPantalla();
+                        System.out.println(Color.WHITE+"[+] Listado de <<"+mmTemaAsignado+">>");
+                        Horario.mmMostrarHorarios();
+                        System.out.println("\n\n");
                         break;
                         case 3:
-                        Horario.mmLeerHorarioMedicos("202110105-CHUNCHO JIMENEZ ANGEL DAVID.csv");
+                        
                         break;
                         case 4:
                         
