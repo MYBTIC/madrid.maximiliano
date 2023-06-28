@@ -97,7 +97,7 @@ public class App {
             System.out.println("\n\t\t4. Viualizar Horario de una asignatura");
             System.out.println("\n\t\t0. salir");
             System.out.print("\n\n\t\t  < + > Digite su opcion: ");
-            mmOpcion = Utilitario.mmValidacion.ValidacionNumero(mmOpcion);
+            mmOpcion = Utilitario.mmValidacion.mmValidacionNumero(mmOpcion);
             Thread.sleep(1200);
             return mmOpcion;
     }

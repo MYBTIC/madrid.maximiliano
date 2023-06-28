@@ -9,7 +9,7 @@ public class Utilitario {
      * @return El numero Ya validado
      */
     public class mmValidacion {
-        public static int ValidacionNumero(int num) {
+        public static int mmValidacionNumero(int num) {
             Scanner Input = new Scanner(System.in);
 
             boolean control = true;
@@ -32,7 +32,7 @@ public class Utilitario {
             return num;
         }
 
-        public static boolean validadorCaracter(String sexo) {
+        public static boolean mmValidadorCaracter(String sexo) {
             String mmSexo1 = "F", mmSexo2 = "M";
             if (sexo.equals(mmSexo1) || sexo.equals(mmSexo1.toLowerCase()) || sexo.equals(mmSexo2)
                     || sexo.equals(mmSexo2.toLowerCase())) {
@@ -43,7 +43,7 @@ public class Utilitario {
 
         }
 
-        public static char verificadorCaracter(String validadorCaracter) {
+        public static char mmVerificadorCaracter(String validadorCaracter) {
             char Caracter = 'o';
             Scanner mmSc = new Scanner(System.in);
 
@@ -51,9 +51,9 @@ public class Utilitario {
                 System.out.print("\nDigite un caracter, M o F: ");
                 validadorCaracter = mmSc.nextLine();
 
-            } while (Utilitario.mmValidacion.validadorCaracter(validadorCaracter) == false);
+            } while (Utilitario.mmValidacion.mmValidadorCaracter(validadorCaracter) == false);
             validadorCaracter = validadorCaracter.toUpperCase();
-            if ((Utilitario.mmValidacion.validadorCaracter(validadorCaracter) == true)) {
+            if ((Utilitario.mmValidacion.mmValidadorCaracter(validadorCaracter) == true)) {
                 Caracter = validadorCaracter.charAt(0);
             }
 
