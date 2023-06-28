@@ -26,17 +26,17 @@ public class Horario extends HorarioBase implements GestiarArchivoHorario {
                 if (mmI != 0) {
                     mmLectura = String.join(mmDelimitador, mmLine);
                     mmLectura = Utilitario.replaceCharacter(mmLectura,';',' ');
-                    columns.add(mmLectura);
+                    System.out.println(mmLectura);
                 }
                 mmI++;
                 
-                
             }
-            System.out.println(columns);
+           
             
         } catch (IOException e) {
             e.printStackTrace();
         }
+         System.out.println(columns);
         Thread.sleep(2000);
     }
     public static void mmLeerHorarioMedicos(String mmRutaArchivo) throws InterruptedException {

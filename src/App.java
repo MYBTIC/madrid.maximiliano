@@ -86,17 +86,17 @@ public class App {
         Utilitario.limpiarPantalla();
         int mmOpcion = 0;
          System.out.println("--------------------------------------------------------");
-            System.out.println("\t\tCarga horaria de <<"+mmTemaAsignado+">>");
+            System.out.println(Color.GREEN+"\t\tCarga horaria de <<"+mmTemaAsignado+">>");
             System.out.println("--------------------------------------------------------");
             System.out.println("\n\n\t\t......................");
-            System.out.print("\n\t\t + Usuario: "+mmUsuarioLogeado.toUpperCase());
+            System.out.print(Color.CYAN+"\n\t\t + Usuario: "+mmUsuarioLogeado.toUpperCase());
 
             System.out.println("\n\n\t\t1. Viualizar Medicos");
             System.out.println("\n\t\t2. Viualizar Especialidades");
             System.out.println("\n\t\t3. Viualizar horarios");
             System.out.println("\n\t\t4. Viualizar Horario de una especialidad");
             System.out.println("\n\t\t0. salir");
-            System.out.print("\n\n\t\t  < + > Digite su opcion: ");
+            System.out.print(Color.UNDERLINED_BLUE+"\n\n\t\t  < + > Digite su opcion: "+Color.RESET);
             mmOpcion = Utilitario.mmValidacion.mmValidacionNumero(mmOpcion);
             Thread.sleep(1200);
             return mmOpcion;
